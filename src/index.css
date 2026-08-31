@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Lora', Georgia, serif;
+    --bg-primary: #FDFCF8;
+    --bg-surface: #FFFFFF;
+    --bg-card: #F9F7F2;
+    --bg-sand: #F2F1EC;
+    --text-main: #1A1A1A;
+    --text-body: #5C574F;
+    --text-muted: #8C867A;
+    --brand-teal: #2D5A5A;
+    --brand-teal-hover: #234848;
+    --brand-teal-light: #EBF2F2;
+    --brand-terracotta: #E89D71;
+    --brand-terracotta-dark: #8B4E2D;
+    --brand-terracotta-light: #FDF4EE;
+    --border-subtle: #E5E1D8;
+    --border-medium: #D8D2C6;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Accessibility Scaling */
+  html.text-size-standard {
+    font-size: 16px;
+  }
+
+  html.text-size-large {
+    font-size: 18.5px;
+  }
+
+  html.text-size-xl {
+    font-size: 21px;
+  }
+
+  /* High Contrast Mode */
+  html.high-contrast {
+    --bg-primary: #000000;
+    --bg-surface: #121212;
+    --bg-card: #1E1E1E;
+    --bg-sand: #262626;
+    --text-main: #FFFFFF;
+    --text-body: #F3F4F6;
+    --text-muted: #D1D5DB;
+    --brand-teal: #2DD4BF;
+    --brand-teal-hover: #5EEAD4;
+    --brand-teal-light: #134E4A;
+    --brand-terracotta: #FBBF24;
+    --brand-terracotta-dark: #FDE68A;
+    --brand-terracotta-light: #78350F;
+    --border-subtle: #6B7280;
+    --border-medium: #9CA3AF;
+  }
+
+  html.high-contrast body {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+
+  html.high-contrast button, 
+  html.high-contrast a,
+  html.high-contrast input,
+  html.high-contrast [role="button"] {
+    outline-color: #FBBF24 !important;
+  }
+
+  /* Reduced Motion */
+  html.reduce-motion *,
+  html.reduce-motion *::before,
+  html.reduce-motion *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Focus States for Elderly Accessibility */
+  :focus-visible {
+    outline: 3px solid #2D5A5A;
+    outline-offset: 3px;
+  }
+
+  html.high-contrast :focus-visible {
+    outline: 4px solid #FBBF24 !important;
+    outline-offset: 4px !important;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+/* Accessible touch target helpers */
+.min-touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Smooth reading line width */
+.readable-measure {
+  max-width: 68ch;
+}

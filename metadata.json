@@ -1,0 +1,6 @@
+{
+  "name": "SAHAYA",
+  "description": "A human-centered digital companion for older adults that simplifies everyday technology through large typography, voice assistance, step-by-step guides, and safe interactive simulations.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
